@@ -1,0 +1,118 @@
+.popup {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    opacity: 1;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup::before {
+    content: '';
+    position: absolute;
+    top: 288px; /* Adjust this value to position the arrow vertically */
+    left: 50%; /* Position the arrow horizontally in the center */
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #134290EB transparent;
+  }
+  
+  .popup-content {
+    position: relative;
+    bottom: 27px;
+    background-color: #134290EB;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 300px;
+    height: auto;
+  }
+  
+  .popup-content .close {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .popup.h2{
+    position: relative;
+    left: 80px;
+  }
+  
+  .drop-area {
+    position: relative;
+    left: 40px;
+    width: 200px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: #134290EB;
+    font-size: 15px;
+  }
+  
+  .file-page {
+    width: 300px;
+    height: auto;
+    color: white;
+  }
+  
+  .text-content {
+    font-size: small;
+    color: white;
+
+  }
+  
+  .close-text-content {
+    margin-top: 10px;
+    background-color: #1784C3; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+ .submit-button{
+    position: relative;
+    left: 90px;
+    width: 100px;
+    height: 25px;
+    background-color: #76B071;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    color: white;
+ } 
+ .popup-heading{
+    position: relative;
+    left: 60px;
+    color: white;
+    font-size: 18px;
+ }
+ .delete-button{
+    position: relative;
+    width: 100px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    color: white;
+    background-color: #F69E9E;
+ }
+ 

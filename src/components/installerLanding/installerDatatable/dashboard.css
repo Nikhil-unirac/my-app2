@@ -1,0 +1,160 @@
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  position: relative;
+  left: 90px;
+  bottom: 390px;
+}
+
+.button-container {
+
+position: relative;
+top:50px;
+margin-top: 0px;
+right: 500px;
+
+}
+.button-container button {
+  position: relative;
+  left: 150px;
+  margin-right: 10px; 
+  margin-left: 50px;
+}
+.button-container button:nth-child(2) {
+  background-color:#F2682A;
+}
+
+.tile-container {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  right: 130px;
+  bottom: -550px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.table-container {
+  margin-top: 0px; 
+  width: 100%;
+}
+
+.table-paper {
+  margin-top: 10px; 
+   top: -10px;
+  position: relative;
+  left: -120px;
+ 
+}
+
+  .tile {
+    flex: 0 0 calc(33.33% - 40px);
+    max-width: 259px;
+    height: 196px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    border: none;
+    background-color:#BFE0F6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 8px 8px 4px #00000029;
+    right: 130px;
+ 
+  }
+  
+  .icons {
+    position: absolute;
+    right: 70px;
+    top: 40px;
+    width: 103px;
+    height: 97px;
+    opacity: 0.8;
+    padding: 5px;
+    background-color:transparent;
+  }
+  
+.tile span {
+  position:relative;
+  bottom: -70px; /* Adjust the distance from the bottom */
+  left:110px;
+  transform: translateX(-50%);
+  width: 100%; /* Use 100% width to fill the tile */
+  font-size: 22px; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: #1784C3;
+  opacity: 0.8;
+
+}
+  .table-label{
+   
+      font-size: 24px;
+      font-weight: bold;
+      color: #388E3C;
+      position:relative;
+      right:930px ;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      margin-top: -50px;
+      top: 100px;
+    }
+  
+  
+  .dash-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #388E3C;
+    position: absolute;
+    left: 7%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    margin-top: -50px;
+  }
+  
+  .tile-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    position: absolute;
+    left: 20px; /* Align to the left */
+    width: auto; /* Let content determine width */
+    border-bottom: 1px solid #5A607F;
+    display: block;
+    padding-bottom: 5px;
+  }
+  
+  .view {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: -100px;
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+.icons-video{
+  max-width: 259px;
+  height: 196px;
+
+}
+
+
+
+.project-heading{
+  color: #388E3C;
+  font-size: 24px;
+  font-weight: bold;
+  color: #388E3C;
+  position:relative;
+  left: 45px;
+  top: -20px;
+}

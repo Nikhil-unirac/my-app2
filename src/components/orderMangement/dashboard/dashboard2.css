@@ -1,0 +1,67 @@
+.tile {
+  flex: 0 0 calc(33.33% - 40px);
+  width: 250px;
+  height: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: none;
+  background-color: #BFE0F6;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 8px 8px 4px #00000029;
+  left: 30px;
+  top: 150px;
+}
+
+.icons {
+  width: 103px;
+  height: 97px;
+}
+
+
+
+.icons-video {
+  max-width: 259px;
+  height: 198px;
+}
+
+.cards-container {
+  position: relative;
+  right: 10px;
+  top: -30px;
+  display: flex;
+ flex-wrap: wrap;
+  padding-left: 2%;
+}
+
+.dash-label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #388E3C;
+  position: relative;
+  top: 160px;
+  left: 220px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+

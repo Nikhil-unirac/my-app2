@@ -1,0 +1,91 @@
+.tile-container {
+  margin-top: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.tile {
+  flex: 0 0 calc(33.33% - 40px);
+  max-width: 350px;
+  height: 110px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 1px 10px #134290;
+  margin: 10px;
+  position: relative;
+}
+
+.tile:hover {
+  background-color: #e5f0ff;
+}
+
+.icons {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 5px 3px 6px #0058FF1A;
+  opacity: 0.8;
+  padding: 5px;
+  background-color: #0058FF1A;
+}
+
+.tile span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #5A607F;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 100px; /* Align to the left */
+  width: auto; /* Let content determine width */
+  bottom: 80px;
+  width: 114px;
+height: 37px;
+}
+
+.dash-label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #04649c;
+  position: absolute;
+  left: 13%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  margin-top: -50px;
+}
+
+.tile-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+  position: absolute;
+  left: 20px; /* Align to the left */
+  width: auto; /* Let content determine width */
+  border-bottom: 1px solid #5A607F;
+  display: block;
+  padding-bottom: 5px;
+}
+
+.view {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 5px;
+  margin-left: -100px;
+  margin-bottom: 10px;
+  font-size: 10px;
+}

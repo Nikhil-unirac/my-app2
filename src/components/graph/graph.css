@@ -1,0 +1,47 @@
+/* Setting styles for the container */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* This allows items to wrap onto multiple lines */
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto 10%;
+    position: relative;
+    margin-top: 110px;
+     
+  }
+  
+  .chart-container {
+    flex: 1; /* This makes each chart container take equal width */
+    margin: 20px; /* Adjust as needed */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 6px;
+    width: 200px;
+    position: relative;
+
+  
+  }
+ 
+.custom-label {
+    position: absolute; /* Set custom label to absolute positioning */
+    top: 10%; /* Position label at 50% from the top */
+    left: 45%; /* Position label at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the label */
+    font-size: 15px; /* Set the font size */
+    font-weight: bold; /* Set the font weight */
+    color: #7d7575; /* Set the text color */
+  
+   
+}
+
+.chart-label {
+    font-size: 24px;         /* Set the font size */
+    font-weight: bold;       /* Set the font weight */
+    color: #04649c;          /* Set the text color */
+    text-align: center;      /* Center align the text */
+    position: absolute;      /* Absolute positioning for alignment */
+    top: -5%;                /* Positioning from the top */
+    left: 8%;               /* Positioning from the left */
+    transform: translate(-50%, -50%) ; /* Rotate and center the text */
+    white-space: nowrap;     /* Prevents text wrapping */
+  }

@@ -1,0 +1,576 @@
+ <div className="content">
+          <Routes>
+            <Route path="/total-plan-set" element={<Newpage />} />
+            <Route path="/total-ahj-submitted" element={<Newpage />} />
+            <Route path="/u-builder-project-configured" element={<Newpage />} />
+            <Route path="/project-pending-payment" element={<Newpage />} />
+          </Routes>
+
+          <Dash />
+          <DrawChart />
+          <Bargraphs />
+          <Table />
+        </div>
+
+        <Footer />
+
+
+
+
+
+
+         <div className="icon-container">
+        <div className="icon-button">
+          <img src={homeIcon} alt="Icon 1" className="icon" />
+        </div>
+        <div className="icon-button">
+          <img src={newProducts} alt="Icon 2" className="icon" />
+        </div>
+        <div className="icon-button">
+          <img src={builder} alt="Icon 3" className="icon" />
+        </div>
+        <div className="icon-button">
+          <img src={permits} alt="Icon 4" className="icon" />
+        </div>
+      </div>
+
+
+
+        <UBuilderButton />
+      <PermitDesignButton />
+      <CertifiedInstallerButton />
+      <MasterInstallerButton />
+      <NewProductsButton />
+     
+
+      <div className="button-container">
+          <Button variant="contained" color="primary">
+            First Button
+          </Button>
+          <Button variant="contained" color="secondary">
+            Second Button
+          </Button>
+        </div>
+
+   
+
+
+        import React, { useState } from 'react';
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TablePagination from '@mui/material/TablePagination';
+import TableRow from '@mui/material/TableRow';
+import Button from '@mui/material/Button';
+import Tag from '../../assets/tag.png';
+import UBuilderButton from './UBuilderButton';
+import CertifiedInstallerButton from './CertifiedInstallerButton';
+import MasterInstallerButton from './MasterInstallerButton';
+import NewProductsButton from './NewProductsButton';
+import PermitDesignButton from './PermitDesignButton';
+import videoFile from '../../assets/gifvideo.mp4';
+import './dashboardtable.css';
+
+const columns = [
+  { id: 'name', label: 'Project Name', minWidth: 120 },
+  { id: 'code', label: 'Client Name', minWidth: 80 },
+  { id: 'date', label: 'Created on', minWidth: 80, align: 'right' },
+  { id: 'status', label: 'Status', minWidth: 20, align: 'right' },
+  { id: 'action', label: 'Action', minWidth: 20, align: 'right' },
+];
+
+function createData(name, code, buttonLabel, priority) {
+  return { name, code, buttonLabel, priority };
+}
+
+const initialRows = [
+  createData('Roof Mount RMS', 'Carlos Pablo', 'Completed', 'High'),
+  createData('China Project', 'Pointy Hawic', 'Pending', 'Medium'),
+  createData('Italy Initiative', 'Sun Solar', 'In Progress', 'Low'),
+  createData('US Project', 'St.Johns', 'Completed', 'High'),
+  createData('Canada Initiative', 'IN', 'Pending', 'Medium'),
+];
+
+const Dashboard = () => {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rows, setRows] = useState(initialRows);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
+
+  const handleSecondButtonClick = () => {
+    const updatedRows = initialRows.map((row) => ({
+      ...row,
+      name: 'New Project Name',
+      code: 'New Client Name',
+      buttonLabel: 'New Status',
+      priority: 'New Priority',
+    }));
+
+    setRows(updatedRows);
+  };
+
+  return (
+    <div className="dashboard-container">
+      <div className="tile-container">
+        {/* ... (other components) */}
+        <div className="button-container">
+          <Button variant="contained" color="primary">
+            First Button
+          </Button>
+          <Button variant="contained" color="secondary" onClick={handleSecondButtonClick}>
+            Second Button
+          </Button>
+        </div>
+
+        <Paper className="table-paper">
+          <TableContainer>
+            <Table stickyHeader aria-label="sticky table">
+              {/* ... (Table components) */}
+              <TableBody>
+                {rows
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row, rowIndex) => (
+                    <TableRow hover role="checkbox" tabIndex={-1} key={rowIndex}>
+                      <TableCell>{row.name}</TableCell>
+                      <TableCell>{row.code}</TableCell>
+                      {/* ... (other columns) */}
+                    </TableRow>
+                  ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          />
+        </Paper>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
+
+
+
+
+ <div className="dashboard-container">
+      <div className="tile-container">
+        <div className="tag-container">
+          <img src={Tag} alt="Tag 1" />
+          <img src={Tag} alt="Tag 2" />
+          <img src={Tag} alt="Tag 3" />
+        </div>
+
+        <div className="dash-label">Dashboard </div>
+
+      
+        <button className="tile">
+          <video src={videoFile} alt="Video Icon" className="icons-video" autoPlay muted loop />
+        </button>
+        <UBuilderButton />
+        <PermitDesignButton />
+        <CertifiedInstallerButton />
+        <MasterInstallerButton />
+        <NewProductsButton />
+        <div className="button-container">
+          <Button variant="contained" color="primary">
+            First Button
+          </Button>
+          <Button variant="contained" color="secondary">
+            Second Button
+          </Button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .tag-container {
+  display: flex;
+  position: relative;
+  left: 1550px;
+  top: 60px;
+  
+  align-items: center;
+}
+
+.tag {
+  position: relative;
+  width: 110px; /* Adjust the size of the container */
+}
+
+.tag img {
+  width: 100%; /* Ensure the image takes the full width of the container */
+}
+
+.tag-text {
+  position: absolute;
+  top: 40%; /* Position the text vertically at the middle */
+  left: 57%; /* Position the text horizontally at the middle */
+  transform: translate(-50%, -50%); /* Center the text */
+  width: 100%;
+  text-align: center;
+  font-size: 10px; /* Adjust the font size as needed */
+  font-weight: bold;
+  padding: 5px; /* Add padding for better readability */
+color: white;
+}
+
+
+
+
+
+dashboard.js
+
+import Navbar from '../../navbar/Navbar';
+import React, { useState } from 'react';
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TablePagination from '@mui/material/TablePagination';
+import TableRow from '@mui/material/TableRow';
+import Button from '@mui/material/Button';
+import ReportImage from '../../assets/report.png';
+import LayoutImage from '../../assets/layout.jpg';
+import UBuilderButton from '../installerCards/UBuilderButton';
+import CertifiedInstallerButton from '../installerCards/CertifiedInstallerButton';
+import MasterInstallerButton from '../installerCards/MasterInstallerButton';
+import NewProductsButton from '../installerCards/NewProductsButton';
+import PermitDesignButton from '../installerCards/PermitDesignButton';
+import videoFile from '../../assets/gifvideo.mp4';
+import '../installerDatatable/dashboard.css';
+
+import MarketingCards from '../../marketingCards/MarketingCards';
+
+const Dashboard = () => {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
+  
+ 
+  const createData = (name, code, buttonLabel, priority) => {
+    return { name, code, buttonLabel, priority };
+  };
+
+  const columns = [
+    { id: 'name', label: 'Project Name', minWidth: 120 },
+    { id: 'code', label: 'Client Name', minWidth: 80 },
+    { id: 'date', label: 'Created on', minWidth: 80, align: 'right' },
+    { id: 'status', label: 'Status', minWidth: 20, align: 'right' },
+    { id: 'action', label: 'Action', minWidth: 20, align: 'right' },
+  ];
+
+  const initialRows = [
+    createData('Roof Mount RMS', 'Carlos Pablo', 'Completed', 'High'),
+    createData('China Project', 'Pointy Hawic', 'Pending', 'Medium'),
+    createData('Italy Initiative', 'Sun Solar', 'In Progress', 'Low'),
+    createData('US Project', 'St.Johns', 'Completed', 'High'),
+    createData('Canada Initiative', 'IN', 'Pending', 'Medium'),
+  ];
+
+  const [rows, setRows] = useState(initialRows);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
+
+  const handleButtonClick = (index) => {
+    const updatedRows = [...rows];
+    switch (updatedRows[index].buttonLabel) {
+      case 'Completed':
+        updatedRows[index].buttonLabel = 'Pending';
+        break;
+      case 'Pending':
+        updatedRows[index].buttonLabel = 'In Progress';
+        break;
+      case 'In Progress':
+        updatedRows[index].buttonLabel = 'Completed';
+        break;
+      default:
+        break;
+    }
+    setRows(updatedRows);
+  };
+
+  const handleSecondButtonClick = () => {
+    const newTableValues = [
+      createData('New Project 1', 'Client A', 'Pending', 'Medium'),
+      createData('New Project 2', 'Client B', 'In Progress', 'Low'),
+      createData('New Project 3', 'Client C', 'Completed', 'High'),
+      createData('New Project 4', 'Client D', 'Pending', 'Medium'),
+      createData('New Project 5', 'Client E', 'In Progress', 'Low'),
+    ];
+
+    setRows(newTableValues);
+  };
+
+  return (
+   
+    <div className="dashboard-container">
+
+    
+      <div className="tile-container">
+     
+
+      <Navbar/>
+       <MarketingCards/>
+        <div className="dash-label">Dashboard </div>
+
+        <button className="tile">
+          <video src={videoFile} alt="Video Icon" className="icons-video" autoPlay muted loop />
+        </button>
+        <UBuilderButton />
+        <PermitDesignButton />
+        <CertifiedInstallerButton />
+        <MasterInstallerButton />
+        <NewProductsButton />
+        <div className="button-container">
+          <Button variant="contained" color="primary">
+            U - Builder
+          </Button>
+          <Button variant="contained" color="secondary" onClick={handleSecondButtonClick}>
+            Permit Design
+          </Button>
+        </div>
+        <div className="table-label"></div>
+        <Paper sx={{ width: '100%', margin: '0 auto', paddingLeft: '0px', paddingRight: '10px' }}>
+          <h2 className="project-heading">Projects</h2>
+          <TableContainer sx={{ marginLeft: '10px', marginRight: '100px', Left: '20px' }}>
+            <Table stickyHeader aria-label="sticky table">
+              <TableHead>
+                <TableRow>
+                  {columns.map((column) => (
+                    <TableCell
+                      key={column.id}
+                      align={column.align}
+                      style={{ minWidth: column.minWidth }}
+                    >
+                      {column.label}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row, rowIndex) => (
+                    <TableRow hover role="checkbox" tabIndex={-1} key={rowIndex}>
+                      <TableCell>{row.name}</TableCell>
+                      <TableCell>{row.code}</TableCell>
+                      {/* Content for the new column */}
+                      <TableCell align="right">Your Content Here</TableCell>
+                      <TableCell align="right">
+                        <Button
+                          variant="contained"
+                          onClick={() => handleButtonClick(rowIndex)}
+                          style={{
+                            backgroundColor:
+                              row.buttonLabel === 'Completed' ? 'green' :
+                                row.buttonLabel === 'Pending' ? 'blue' :
+                                  'red',
+                            color: 'white',
+                            '&:hover': {
+                              backgroundColor:
+                                row.buttonLabel === 'Completed' ? 'darkgreen' :
+                                  row.buttonLabel === 'Pending' ? 'darkblue' :
+                                    'darkred',
+                            },
+                          }}
+                        >
+                          {row.buttonLabel}
+                        </Button>
+                      </TableCell>
+                      <TableCell align="right">
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          startIcon={<img src={ReportImage} alt="Report" style={{ width: '30px', height: '30px', margin: '5px' }} />}
+                          onClick={() => {
+                            console.log('Report clicked for row:', row.name);
+                          }}
+                          style={{ backgroundColor: 'white', color: 'black' }}
+                        >
+                          Report
+                        </Button>
+                        <Button
+                          variant="contained"
+                          color="secondary"
+                          startIcon={<img src={LayoutImage} alt="Layout" style={{ width: '30px', height: '30px' }} />}
+                          onClick={() => {
+                            console.log('Layout clicked for row:', row.name);
+                          }}
+                          style={{ backgroundColor: 'white', color: 'black', margin: '5px' }}
+                        >
+                          Layout
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          />
+        </Paper>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
+
+
+
+
+
+
+  .underline {
+    border-bottom: 1px solid #ccc;
+    margin-top: -40px;
+    width: calc(100% - 0px); /* Adjust width */
+  }
+
+
+
+
+
+app.js
+
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import Dashboard from './components/landing/dashboard/Dashboard';
+import NewOrderComponent from './components/orderDashboard/sideBarDashboard/newOrder/newOrder'; // import your NewOrderComponent
+import CustomerDiscountComponent from './components/orderDashboard/sideBarDashboard/customerDiscount/customerDiscount'; // import your CustomerDiscountComponent
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route path="/neworder" component={NewOrderComponent} />
+          <Route path="/customerdiscount" component={CustomerDiscountComponent} />
+          <Route path="/" component={Dashboard} />
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+
+
+
+sdiebar
+
+
+
+
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import './sideBarDashboard.css'; // Import the CSS file for sidebar styling
+import HomeIcon from '@mui/icons-material/Home'; // Import the home icon from Material-UI
+import Logo from '../../assets/logo.png'; // Import your logo image
+import Neworder from '../../assets/docs.png';
+import Discount from '../../assets/discount.png';
+import loginimg from '../../assets/Ellipse.png';
+
+const Sidebar = ({ onClose }) => {
+  const [showButtons, setShowButtons] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleHomeClick = () => {
+    setShowButtons(!showButtons);
+  };
+
+  // Function to navigate to New Order component
+  const goToNewOrder = () => {
+    navigate('/neworder'); // Use navigate function to go to '/neworder' route
+    onClose(); // Close sidebar
+  };
+
+  // Function to navigate to Customer Discount component
+  const goToCustomerDiscount = () => {
+    navigate('/customerdiscount'); // Use navigate function to go to '/customerdiscount' route
+    onClose(); // Close sidebar
+  };
+
+  return (
+    <div className="sideBar">
+      {/* Logo */}
+      <div className="logo-containers">
+        <img src={Logo} alt="Logo" className="logo" />
+      </div>
+
+      {/* Home button with icon and description */}
+      <button className="home-btn" onClick={handleHomeClick}>
+        <HomeIcon />
+        <span className="btn-description">Home</span>
+      </button>
+
+      {/* Other buttons with icon and description */}
+      <div className={`other-buttons ${showButtons ? 'show' : ''}`}>
+        <button className="other-btn" onClick={goToNewOrder}> {/* Call goToNewOrder function */}
+          <img src={Neworder} alt="New Order Icon" />
+          <span className="btn-description">New Order</span>
+        </button>
+
+        <button className="other-btn" onClick={goToCustomerDiscount}> {/* Call goToCustomerDiscount function */}
+          <img src={Discount} alt="Discount Icon" />
+          <span className="btn-description">Customer Discount</span>
+        </button>
+      </div>
+
+      {/* Logout button */}
+      <button className="logout-btn" onClick={onClose}>
+        <img src={loginimg} alt="Logout Icon" />
+        <span className="logoutbtn-description">Logout</span>
+      </button>
+    </div>
+  );
+};
+
+export default Sidebar;

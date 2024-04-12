@@ -1,0 +1,198 @@
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .button-container {
+  
+  position: relative;
+  top:50px;
+  margin-top: 0px;
+  right: 500px;
+  
+
+  
+  }
+  .button-container button {
+    margin-right: 10px; 
+  
+  }
+  .button-container button:nth-child(2) {
+    background-color:#F2682A;
+  }
+  
+  .tile-container {
+    
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .table-container {
+    margin-top: 0px; 
+    width: 100%;
+  }
+  
+  .table-paper {
+    margin-top: 10px; 
+     top: -10px;
+    position: relative;
+  right: 150px;
+   
+  }
+  
+  .tag-container {
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px; 
+  }
+    .tile {
+      flex: 0 0 calc(33.33% - 40px);
+      max-width: 259px;
+      height: 196px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      border: none;
+      background-color:#BFE0F6;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 10px;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 8px 8px 4px #00000029;
+      right: 130px;
+   
+    }
+    
+    .icons {
+      position: absolute;
+      right: 70px;
+      top: 40px;
+      width: 103px;
+      height: 97px;
+      opacity: 0.8;
+      padding: 5px;
+      background-color:transparent;
+    }
+    
+  .tile span {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Use 100% width to fill the tile */
+    font-size: 20px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #1784C3;
+    opacity: 0.8;
+  left: 210px;
+  }
+    .table-label{
+     
+        font-size: 24px;
+        font-weight: bold;
+        color: #388E3C;
+        position:relative;
+    right:930px ;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        margin-top: -50px;
+        top: 100px;
+      }
+    
+    
+    .dash-label {
+      font-size: 24px;
+      font-weight: bold;
+      color: #388E3C;
+      position: absolute;
+      left: 7%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      margin-top: -50px;
+    }
+    
+    .tile-text {
+      font-size: 25px;
+      font-weight: bold;
+      color: #000000;
+      position: absolute;
+      left: 20px; /* Align to the left */
+      width: auto; /* Let content determine width */
+      border-bottom: 1px solid #5A607F;
+      display: block;
+      padding-bottom: 5px;
+    }
+    
+    .view {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      border-radius: 5px;
+      margin-left: -100px;
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+  .icons-video{
+    max-width: 259px;
+    height: 196px;
+  
+  }
+  
+  .tag-container {
+    position: relative;
+    display: flex;
+    top: -150px;
+    left: 1520px;
+    margin-top: 10px;
+  width: 114px;
+  height: 42px;
+  padding: 0;
+  
+  opacity: 1;
+   
+  }
+  .tag-container {
+    position: relative;
+  }
+  
+  .tag {
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 50px; 
+    width: 60px;
+    height: 55px;
+    justify-content: space-between;
+    right: 20px;
+  
+  }
+  
+  .tag-text {
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    top: 5%;
+    color: white;
+   cursor: pointer;
+    padding: 5px; /* Adjust padding as needed */
+    font-size: 10px; /* Adjust font size as needed */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+  }
+  .project-heading{
+    color: #388E3C;
+    font-size: 24px;
+    font-weight: bold;
+    color: #388E3C;
+    position:relative;
+    left: 45px;
+  }

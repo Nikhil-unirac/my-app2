@@ -1,0 +1,80 @@
+/* Sidebar.css */
+.sidebar1 {
+  background-image: url('../../assets//bgimage.png'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  background-color: white;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: -2px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar1 h2 {
+  margin-top: 0;
+}
+
+.sidebar1 button {
+  position: relative;
+  margin-top: 20px;
+  border-radius: 50%; /* Make buttons circular */
+  width: 80px; /* Set button width */
+  height: 80px; /* Set button height */
+  border: none; /* Remove button border */
+  background-color: var(--button-color);
+  box-shadow: -7px 5px 6px #00000029;
+  margin-left: 10px;
+  margin-right: 50px;
+  left: 10px;
+ 
+}
+
+.button-sidebar1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 20px; 
+  align-items: center; 
+  
+
+opacity: 1;
+}
+
+
+.sidebar1 .close-button {
+ bottom: 60px;
+  position: relative;
+  left: 470px;
+  background-color: #1784C3;
+  color: white;
+  border: none;
+  padding: 0; 
+  border-radius: 50%;
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  background-image: url('../../assets/closebutton.png');
+  background-repeat: no-repeat;
+  background-size: 40%; 
+  background-position: center; 
+}
+.underline {
+  border-bottom: 1px solid #ccc;
+  margin-top: -40px;
+  width: calc(100% - 0px); /* Adjust width */
+}
+
+.button-sidebar1 button p {
+  position: relative;
+  right: 20px;
+   top: 50px;
+  font-size: 16px; /* Adjust as needed */
+  color: #446A83; /* Adjust the color as needed */
+ font-weight:bold;
+  margin: 0px;
+  white-space: nowrap; /* Prevent line breaks */
+}
